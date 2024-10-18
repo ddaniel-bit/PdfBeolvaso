@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfPdfReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PDF Vulnerability Scanner Reader" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="ReadPdfButton" 
+                Content="Read PDF" 
+                Click="ReadPdfButton_Click" 
+                HorizontalAlignment="Left" 
+                Margin="10" 
+                Padding="10,5"/>
+
+        <ScrollViewer Grid.Row="1" 
+                      VerticalScrollBarVisibility="Auto" 
+                      HorizontalScrollBarVisibility="Auto">
+            <StackPanel x:Name="FindingsStackPanel" Margin="10"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
